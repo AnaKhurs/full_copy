@@ -15,7 +15,7 @@
     let numbers = [1, 2, 3];
 
     let numbersFullCopy = [...numbers]
-    
+
     // 3. Object inside an object
     let man1 = {
         name: 'John',
@@ -26,7 +26,7 @@
         }
     };
 
-    let man1FullCopy // your code
+    let man1FullCopy = {...man1, mother: {...man1.mother}}
 
 
     // 4. Array of primitives inside an object
