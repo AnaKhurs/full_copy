@@ -146,7 +146,6 @@
         }
     }
 
-
     //10 Array of objects inside an object -> object -> array -> object ->  object
     let man7 = {
         name: 'John',
@@ -186,6 +185,19 @@
         }
     };
 
-    let man7FullCopy  //  your code
+    let man7FullCopy = {
+        ...man7,
+        mother: {
+            ...man7.mother,
+            work: {...man7.mother.work},
+            parents: man7.mother.parents.map(p => ({
+                ...p,
+                favoriteDish: {
+                    ...p.favoriteDish,
+                    ingredients: p.favoriteDish.ingredients.map(i => ({...i}))
+                }
+            }))
+        }
+    }
 
 </script>
