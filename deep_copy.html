@@ -28,7 +28,6 @@
 
     let man1FullCopy = {...man1, mother: {...man1.mother}}
 
-
     // 4. Array of primitives inside an object
     let man2 = {
         name: 'John',
@@ -36,9 +35,8 @@
         friends: ["Peter", "Steven", "William"]
     };
 
-    let man2FullCopy  // your code
-
-
+    let man2FullCopy = {...man2, friends: [...man2.friends]}
+    
     // 5 Array of objects
     let people = [
         {name: "Peter", age: 30},
